@@ -25,5 +25,8 @@ Route::get('/listings/create', [ListingController::class, 'create']);
 //Show Store new Listing
 Route::post('/listings', [ListingController::class, 'store']);
 
+//Show Store new Listing
+Route::get('/listings/{listing}/edit', [ListingController::class, 'edit']);
+
 //Show single Listing
 Route::get('/listings/{listing}', [ListingController::class, 'show']);

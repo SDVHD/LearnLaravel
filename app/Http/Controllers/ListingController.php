@@ -44,9 +44,14 @@ class ListingController extends Controller
             $formFields['logo'] = $request->file('logo')->store('logos', 'public');
         }
 
-        /* dd($formFields['logo']); */
         Listing::create($formFields);
 
         return redirect('/')->with('message', 'Listing created successfully');
     }
+
+    //Show Edit Form
+    public function edit(Listing $listing) {
+        return view('listings.edit', ['listing' => $listing]);
+    }
+
 }
