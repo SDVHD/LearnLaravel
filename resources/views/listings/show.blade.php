@@ -37,7 +37,7 @@
         </x-card>
         <x-card class="mt-4 p-2 flex space-x-6">
             <a href="/listings/{{ $listing->id }}/edit">
-                <i class="fa-solid fa-pencil">Edit</i>
+                <i class="fa-solid fa-pencil p-1"></i>Edit
             </a>
         </x-card>
     </div>
