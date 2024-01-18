@@ -76,4 +76,9 @@ class ListingController extends Controller
         return view('listings.edit', ['listing' => $listing]);
     }
 
+    //Delete Listing
+    public function destroy(Listing $listing) {
+        $listing->delete();
+        return redirect('/')->with('message', 'Listing updated successfully');
+    }
 }
