@@ -29,7 +29,6 @@ class UserController extends Controller
 
         //Autologin after Creating
         auth()->login($user);
-        redirect('/')->with('message', 'User created abd logged in');
-        
+        return redirect('/')->with('message', 'User created abd logged in');
     }
 }
